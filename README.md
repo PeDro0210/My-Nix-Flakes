@@ -2,9 +2,25 @@
 
 My own nix flakes with all the dependecies that I usually have in my workflow.
 
-# Coming Soon...
-- Installer with my own dotfiles included.
-- workflow/aesthetic showcase.
+[./assets/readme_resources/workflow.mp4](workflow-vid)
+
+# Before installing
+ - In the hosts add your own host and add your own hardware-configuration.nix
+ - Check the modules for all your names
+
+# How to install it
+  - Clone the repo:
+    ```bash
+    git clone https://github.com/PeDro0210/General-Dotfiles.git
+    ```
+  - Give permissions to the sh-script for running:
+    ```bash
+    chmod +x ./install.sh
+    ```
+  - Run the sh-script:
+    ```bash
+    ./install.sh
+    ```
 
 # Important
 

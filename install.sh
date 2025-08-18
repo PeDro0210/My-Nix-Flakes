@@ -1,7 +1,7 @@
 #/bin/sh
 
 # builds with my flakes
-sudo nixos-rebuild switch --flake .#pedropc --impure
+sudo nixos-rebuild switch --flake .#default --impure
 
 # For adding the miku cursor
 ln -s /home/$USER/Nix-Config/assets/miku-cursor-linux ~/.local/share/icons # Remeber how does Symbolic Links work
