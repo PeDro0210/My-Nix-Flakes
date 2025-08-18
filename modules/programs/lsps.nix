@@ -5,15 +5,18 @@
 
   #TODO: refactor this for later, but this is a good start
   environment.systemPackages = with pkgs; [
-    # Runtime
+    # Runtime/Compilers
     cargo
     rustc
     lld
+    zig
 
     #Lsp
     rust-analyzer
     nil
     lua-language-server
+    zig
+    zls
 
     #Formaters
     nixpkgs-fmt

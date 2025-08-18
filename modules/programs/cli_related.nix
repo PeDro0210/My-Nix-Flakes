@@ -12,12 +12,11 @@
     deno
     starship
     fzf
-    zig
     btop
     yazi
     mktemp
     cliphist
-    rmpc
+
     mpd
     spotifyd
     fastfetch
@@ -35,6 +34,10 @@
     fishPlugins.fzf-fish
     grc
     fd
+
+    ueberzugpp
+
+    hwinfo
   ];
 
   programs.neovim.enable = true;

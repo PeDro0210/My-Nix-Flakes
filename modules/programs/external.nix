@@ -10,7 +10,6 @@
     openrgb-with-all-plugins
     spotify
     nwg-look
-    themechanger
     protonup # Steam in proton
     font-manager
     gnome-tweaks
@@ -24,7 +23,6 @@
     prismlauncher # like dude, I need my minecraft launcher
     protonup-qt
 
-    beeper
   ];
 
   #Steam
