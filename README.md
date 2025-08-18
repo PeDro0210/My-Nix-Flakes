@@ -2,7 +2,7 @@
 
 My own nix flakes with all the dependecies that I usually have in my workflow.
 
-[workflow-vid](https://youtu.be/wGX1GXiLP1Y)
+[workflow-gif](./assets/readme_resources/workflow.gif)
 
 # Before installing
  - In the hosts add your own host and add your own hardware-configuration.nix
