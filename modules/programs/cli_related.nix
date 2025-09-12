@@ -47,8 +47,9 @@
     unzip
 
     unrar # for the fucking kid that uses winrar in 2025
+    dxvk # for direct x shit
 
-    dxvk
+    calcurse
   ];
 
   programs.neovim.enable = true;

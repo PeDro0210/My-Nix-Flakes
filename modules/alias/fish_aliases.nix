@@ -3,10 +3,10 @@
 # this nix file is just made for large cli commands
 let
 
-  rebuildNixOs = pkgs.writeScriptBin "rebuild-nixos" ''
+  rebuildNixOS = pkgs.writeScriptBin "rebuild-nixos" ''
     cd /home/$(whoami)/Nix-Config
     git add .
-    sudo nixos-rebuild switch --flake .#pedropc --impure --upgrade
+    nixos-rebuild switch --flake .#pedropc --impure --upgrade
     cd - 
   '';
 
@@ -14,12 +14,18 @@ let
     cd /home/$(whoami)/Nix-Config
     nvim
   '';
+
+  updateNixOS = pkgs.writeScriptBin "update-nixos" ''
+    nix flake update nixpkgs nixpkgs-unstable nix-flatpak
+    rebuild-nixos
+  '';
 in
 {
 
   environment.systemPackages = [
-    rebuildNixOs
+    rebuildNixOS
     nixOsConfig
+    updateNixOS
   ];
 
 }

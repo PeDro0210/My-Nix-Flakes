@@ -31,7 +31,11 @@
   # The one and only xdg-portal
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-wlr
+    ];
   };
 
   # For loging in to hyprland

@@ -18,6 +18,8 @@
     ./programs/third-party-pkgs/flatpak/fightcade.nix
     ./programs/third-party-pkgs/flatpak/flatseal.nix
     ./alias/fish_aliases.nix
+    ./programs/xdg.nix
+    ./alias/extra_groups.nix
   ];
 
   #TODO: change the boot loader config to another place
