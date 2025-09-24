@@ -3,6 +3,7 @@
 {
   nix.settings.experimental-features = "nix-command flakes";
 
+  #TODO: refactor this
   imports = [
     ./drivers/nvidia.nix
     ./drivers/bluetooth.nix
@@ -16,10 +17,13 @@
     ./programs/lsps.nix
     ./drivers/keyboard.nix
     ./programs/third-party-pkgs/flatpak/fightcade.nix
-    ./programs/third-party-pkgs/flatpak/flatseal.nix
+    ./programs/third-party-pkgs/flatpak/general.nix
     ./alias/fish_aliases.nix
     ./programs/xdg.nix
     ./alias/extra_groups.nix
+
+    ./utils/containers.nix
+    ./utils/gc.nix
   ];
 
   #TODO: change the boot loader config to another place

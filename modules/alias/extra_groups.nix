@@ -6,6 +6,7 @@
     # for my main nix utilies
     "rebuild-nixos"
     "nix"
+    "update-nixos"
 
   ];
 }

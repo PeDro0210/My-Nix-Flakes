@@ -6,7 +6,7 @@ let
   rebuildNixOS = pkgs.writeScriptBin "rebuild-nixos" ''
     cd /home/$(whoami)/Nix-Config
     git add .
-    nixos-rebuild switch --flake .#pedropc --impure --upgrade
+    sudo nixos-rebuild switch --flake .#pedropc --impure --upgrade
     cd - 
   '';
 
@@ -16,8 +16,9 @@ let
   '';
 
   updateNixOS = pkgs.writeScriptBin "update-nixos" ''
-    nix flake update nixpkgs nixpkgs-unstable nix-flatpak
-    rebuild-nixos
+    cd /home/$(whoami)/Nix-Config
+    sudo nix flake update nixpkgs nixpkgs-unstable nix-flatpak
+    sudo rebuild-nixos
   '';
 in
 {

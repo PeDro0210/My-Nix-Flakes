@@ -22,8 +22,6 @@
     prismlauncher # like dude, I need my minecraft launcher
     protonup-qt
 
-    spotify
-
   ];
 
   #Steam
