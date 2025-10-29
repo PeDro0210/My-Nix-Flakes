@@ -1,9 +1,9 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs-unstable, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    pkgs-unstable.wiremix
-    pkgs-unstable.ncspot
+  environment.systemPackages = with pkgs-unstable; [
+    wiremix
+    ncspot
   ];
 
 }

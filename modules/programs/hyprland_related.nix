@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable,... }:
 {
 
   environment.systemPackages = with pkgs; [
@@ -15,8 +15,16 @@
 
     wlrctl
     wl-kbptr
-    hyprlock
+    
+    pkgs-unstable.quickshell
+
+    qt6.qtdeclarative
+    kdePackages.qt5compat
+
+    wallust
   ];
+
+
 
   programs.hyprland = {
     enable = true;

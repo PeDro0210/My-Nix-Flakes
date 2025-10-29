@@ -50,6 +50,8 @@
     dxvk # for direct x shit
 
     calcurse
+
+    tree-sitter
   ];
 
   programs.neovim.enable = true;

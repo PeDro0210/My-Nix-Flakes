@@ -22,6 +22,8 @@
     prismlauncher # like dude, I need my minecraft launcher
     protonup-qt
 
+    lutris-free
+    wine
   ];
 
   #Steam

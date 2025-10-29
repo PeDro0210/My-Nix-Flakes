@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config,  ... }:
 {
   hardware = {
     graphics = {
@@ -15,7 +15,7 @@
 
     nvidiaSettings = true;
 
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
   # For weird bug for hyprland freezing
