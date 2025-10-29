@@ -1,4 +1,4 @@
-# Synthwave Nix Flakes
+# My Nix Flakes
 
 My own nix flakes with all the dependecies that I usually have in my workflow.
 
