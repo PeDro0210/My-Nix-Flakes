@@ -9,7 +9,7 @@
   };
 
   outputs =
-    { nix-flatpak, spicetify-nix, ... }@inputs:
+    { spicetify-nix, nix-flatpak, ... }@inputs:
     let
 
       mkSystem =
@@ -20,7 +20,7 @@
         pkgs.lib.nixosSystem {
           system = system;
           modules = [
-            spicetify-nix.nixosModules.spicetify
+            spicetify-nix.nixosModules.default
             nix-flatpak.nixosModules.nix-flatpak
             { networking.hostName = hostname; }
             # General configuration (users, networking, sound, etc)
@@ -30,7 +30,7 @@
 
           ];
 
-          specialArgs = { inherit inputs pkgs-unstable; };
+          specialArgs = { inherit inputs pkgs-unstable spicetify-nix; };
         };
 
     in
