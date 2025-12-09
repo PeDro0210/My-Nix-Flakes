@@ -1,4 +1,4 @@
-{ config,  ... }:
+{ config, ... }:
 {
   hardware = {
     graphics = {
@@ -15,7 +15,7 @@
 
     nvidiaSettings = true;
 
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 
   # For weird bug for hyprland freezing
@@ -23,5 +23,3 @@
     "initcall_blacklist=simpledrm_platform_driver_init"
   ];
 }
-
-

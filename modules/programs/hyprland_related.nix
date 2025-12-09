@@ -1,13 +1,14 @@
-{ pkgs, pkgs-unstable,... }:
+{ pkgs, pkgs-unstable, ... }:
 {
 
   environment.systemPackages = with pkgs; [
     kitty
-    rofi-wayland
+    rofi
     swww # For background
+
     # for workspace to work as intended
     waybar
-    pyprland
+    pkgs-unstable.pyprland
     xdg-desktop-portal-hyprland
     wl-clipboard
     hyprshot
@@ -15,7 +16,7 @@
 
     wlrctl
     wl-kbptr
-    
+
     pkgs-unstable.quickshell
 
     qt6.qtdeclarative
@@ -23,8 +24,6 @@
 
     wallust
   ];
-
-
 
   programs.hyprland = {
     enable = true;
@@ -49,7 +48,6 @@
   # For loging in to hyprland
   services.greetd = {
     enable = true;
-    vt = 3;
     settings = {
       default_session = {
         user = "pedro0210"; # this my user, change it to yours

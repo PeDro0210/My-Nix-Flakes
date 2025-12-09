@@ -2,13 +2,14 @@
   description = "Pedro0210 NixOS Flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
   outputs =
-    { nix-flatpak, ... }@inputs:
+    { nix-flatpak, spicetify-nix, ... }@inputs:
     let
 
       mkSystem =
@@ -19,6 +20,7 @@
         pkgs.lib.nixosSystem {
           system = system;
           modules = [
+            spicetify-nix.nixosModules.spicetify
             nix-flatpak.nixosModules.nix-flatpak
             { networking.hostName = hostname; }
             # General configuration (users, networking, sound, etc)

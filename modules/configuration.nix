@@ -7,23 +7,27 @@
   imports = [
     ./drivers/nvidia.nix
     ./drivers/bluetooth.nix
+    ./drivers/printing.nix
+    ./drivers/keyboard.nix
+
     ./programs/cli_related.nix
     ./programs/hyprland_related.nix
     ./programs/pipewire_related.nix
-    ./utils/fonts.nix
     ./programs/external.nix
     ./programs/unstable.nix
     ./programs/theme_related.nix
     ./programs/lsps.nix
-    ./drivers/keyboard.nix
     ./programs/third-party-pkgs/flatpak/fightcade.nix
     ./programs/third-party-pkgs/flatpak/general.nix
-    ./alias/fish_aliases.nix
     ./programs/xdg.nix
+    ./programs/spicetify.nix
+
+    ./alias/fish_aliases.nix
     ./alias/extra_groups.nix
 
     ./utils/containers.nix
     ./utils/gc.nix
+    ./utils/fonts.nix
   ];
 
   #TODO: change the boot loader config to another place
@@ -81,4 +85,13 @@
 
   system.stateVersion = "25.11";
 
+  # for fking fightcade nixpkg
+  programs.nix-ld.enable = true;
+
+  #TODO: remove them when is not needed for pkg building
+
+  # is decrepete, but still I need it
+  nixpkgs.config.permittedInsecurePackages = [
+    "mbedtls-2.28.10"
+  ];
 }

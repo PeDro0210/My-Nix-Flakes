@@ -10,6 +10,7 @@
 
     #Formaters
     nixpkgs-fmt
+    nixfmt
     nixfmt-rfc-style
     stylua
 

@@ -52,6 +52,8 @@
     calcurse
 
     tree-sitter
+
+    git-lfs
   ];
 
   programs.neovim.enable = true;

@@ -9,21 +9,24 @@
     vesktop
     openrgb-with-all-plugins
     nwg-look
-    protonup # Steam in proton
+    protonup-ng # Steam in proton
     font-manager
     gnome-tweaks
-    libsForQt5.kdenlive
     libreoffice
     blender
     obs-studio
 
-    stremio
+    #stremio
 
     prismlauncher # like dude, I need my minecraft launcher
     protonup-qt
-
     lutris-free
+
     wine
+
+    pegasus-frontend
+    quick-webapps
+
   ];
 
   #Steam
