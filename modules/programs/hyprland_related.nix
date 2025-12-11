@@ -19,9 +19,6 @@
 
     pkgs-unstable.quickshell
 
-    qt6.qtdeclarative
-    kdePackages.qt5compat
-
     wallust
   ];
 

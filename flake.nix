@@ -9,7 +9,11 @@
   };
 
   outputs =
-    { spicetify-nix, nix-flatpak, ... }@inputs:
+    {
+      spicetify-nix,
+      nix-flatpak,
+      ...
+    }@inputs:
     let
 
       mkSystem =

@@ -6,7 +6,6 @@
     #Lsp
     nil
     nixd
-    libsForQt5.qt5.qtdeclarative
 
     #Formaters
     nixpkgs-fmt
