@@ -48,7 +48,7 @@
     settings = {
       default_session = {
         user = "pedro0210"; # this my user, change it to yours
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red --cmd Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --theme border=gray;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red --cmd Hyprland";
       };
     };
   };
