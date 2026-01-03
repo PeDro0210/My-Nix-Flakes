@@ -12,7 +12,7 @@
         hidePodcasts
       ];
       theme = spicePkgs.themes.text;
-      colorScheme = "RosePineMoon";
+      colorScheme = "Kanagawa";
 
     };
 }

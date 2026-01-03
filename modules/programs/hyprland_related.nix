@@ -1,4 +1,10 @@
-{ pkgs, pkgs-unstable, ... }:
+{
+  lib,
+  hyprland-plugins,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 {
 
   environment.systemPackages = with pkgs; [

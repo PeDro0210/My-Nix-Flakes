@@ -6,6 +6,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
   };
 
   outputs =
@@ -34,7 +35,13 @@
 
           ];
 
-          specialArgs = { inherit inputs pkgs-unstable spicetify-nix; };
+          specialArgs = {
+            inherit
+              inputs
+              pkgs-unstable
+              spicetify-nix
+              ;
+          };
         };
 
     in

@@ -54,6 +54,7 @@
     tree-sitter
 
     git-lfs
+    jq
   ];
 
   programs.neovim.enable = true;

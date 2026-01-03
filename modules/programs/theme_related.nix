@@ -3,6 +3,7 @@
 
   environment.systemPackages = with pkgs; [
     kanagawa-gtk-theme
+    rose-pine-icon-theme
   ];
 
   qt = {
