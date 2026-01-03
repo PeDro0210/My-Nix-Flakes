@@ -12,4 +12,7 @@ Special thx to @JaKooLit for being an essential part of the hyprland community f
 > The dotfiles are agnostic to nix. Cause' they were created before my first nixos boot.
 > I'm new to nix, so this flake has a lot of bad practices.
 
+# Dotfiles:
+
+[dotfiles-url](https://github.com/PeDro0210/General-Dotfiles) 
 
