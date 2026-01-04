@@ -2,7 +2,9 @@
 
 My own nix flakes with all the dependecies that I usually have in my workflow.
 
-<img src="./assets/readme_resources/workflow.gif">
+<img src="./assets/readme_resources/first_image.png">
+<img src="./assets/readme_resources/second_image.png">
+
 
 # Important
 
@@ -11,8 +13,4 @@ Special thx to @JaKooLit for being an essential part of the hyprland community f
 > [!NOTE]
 > The dotfiles are agnostic to nix. Cause' they were created before my first nixos boot.
 > I'm new to nix, so this flake has a lot of bad practices.
-
-# Dotfiles:
-
-[dotfiles-url](https://github.com/PeDro0210/General-Dotfiles) 
 
