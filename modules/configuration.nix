@@ -94,4 +94,8 @@
   nixpkgs.config.permittedInsecurePackages = [
     "mbedtls-2.28.10"
   ];
+
+  # for mounting usbs
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
 }
