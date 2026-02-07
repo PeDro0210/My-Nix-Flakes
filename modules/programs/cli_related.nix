@@ -34,7 +34,6 @@
 
     ueberzugpp
 
-    bat # prettier Cat alternative
     eza # Ls but cooler
     xh # Httpie but better
     fselect # fzf but better
@@ -57,7 +56,6 @@
     jq
   ];
 
-  programs.neovim.enable = true;
   programs.git.enable = true;
   programs.fish.enable = true;
   programs.starship.enable = true;

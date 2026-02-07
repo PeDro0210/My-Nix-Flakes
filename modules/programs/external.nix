@@ -1,11 +1,13 @@
 {
   pkgs,
-  pkgs-unstable,
+  inputs,
+  system,
   ...
 }:
 
 {
   environment.systemPackages = with pkgs; [
+    inputs.zen-browser.packages."${system}".beta
     firefox
     vesktop
     openrgb-with-all-plugins

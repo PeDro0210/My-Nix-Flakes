@@ -6,6 +6,12 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
 
   };
 
@@ -13,6 +19,7 @@
     {
       spicetify-nix,
       nix-flatpak,
+      zen-browser,
       ...
     }@inputs:
     let
@@ -40,6 +47,8 @@
               inputs
               pkgs-unstable
               spicetify-nix
+              zen-browser
+              system
               ;
           };
         };
