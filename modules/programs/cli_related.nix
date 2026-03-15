@@ -3,6 +3,9 @@
 
   #TODO: refactor this for later, but this is a good start
   environment.systemPackages = with pkgs; [
+
+    imagemagick
+
     wget
     libgcc
     gcc
@@ -32,8 +35,6 @@
     grc
     fd
 
-    ueberzugpp
-
     eza # Ls but cooler
     xh # Httpie but better
     fselect # fzf but better
@@ -54,6 +55,10 @@
 
     git-lfs
     jq
+
+    wiremix
+    ncspot
+
   ];
 
   programs.git.enable = true;
@@ -64,5 +69,12 @@
 
   #General configs
   programs.zoxide.enableFishIntegration = true;
+
+  programs.direnv.enable = true;
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
 }

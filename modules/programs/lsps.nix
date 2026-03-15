@@ -13,6 +13,9 @@
     nixfmt-rfc-style
     stylua
 
+    prettier
+    markdownlint-cli2
+    markdown-toc
   ];
 
 }

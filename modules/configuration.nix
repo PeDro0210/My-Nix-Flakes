@@ -14,7 +14,6 @@
     ./programs/hyprland_related.nix
     ./programs/pipewire_related.nix
     ./programs/external.nix
-    ./programs/unstable.nix
     ./programs/theme_related.nix
     ./programs/lsps.nix
     ./programs/third-party-pkgs/flatpak/fightcade.nix
@@ -90,12 +89,15 @@
 
   #TODO: remove them when is not needed for pkg building
 
-  # is decrepete, but still I need it
+  # Is decrepete, but still I need it
   nixpkgs.config.permittedInsecurePackages = [
-    "mbedtls-2.28.10"
+    # "mbedtls-2.28.10"
   ];
 
   # for mounting usbs
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+
+  # I want to spend uneeded resources
+  powerManagement.enable = false;
 }

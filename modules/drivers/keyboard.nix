@@ -26,5 +26,10 @@
   # for enabling vial udev config
   services.udev.extraRules = ''
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+
+    KERNEL=="uinput", GROUP="users", MODE:="0660"
+
+    KERNEL=="event*", GROUP="users", NAME="input/%k", MODE:="0660"
   '';
+
 }

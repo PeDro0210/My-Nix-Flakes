@@ -1,5 +1,6 @@
 {
   pkgs,
+  hytale-launcher,
   inputs,
   system,
   ...
@@ -7,8 +8,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    inputs.zen-browser.packages."${system}".beta
-    firefox
+    firefox-bin
     vesktop
     openrgb-with-all-plugins
     nwg-look
@@ -28,6 +28,8 @@
 
     pegasus-frontend
     quick-webapps
+
+    hytale-launcher.packages."${system}".default
 
   ];
 

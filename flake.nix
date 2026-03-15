@@ -2,16 +2,10 @@
   description = "Pedro0210 NixOS Flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
+    hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
 
   };
 
@@ -19,16 +13,13 @@
     {
       spicetify-nix,
       nix-flatpak,
-      zen-browser,
+      hytale-launcher,
       ...
     }@inputs:
     let
 
       mkSystem =
         pkgs: system: hostname:
-        let
-          pkgs-unstable = import inputs.nixpkgs-unstable { inherit system; };
-        in
         pkgs.lib.nixosSystem {
           system = system;
           modules = [
@@ -45,9 +36,8 @@
           specialArgs = {
             inherit
               inputs
-              pkgs-unstable
               spicetify-nix
-              zen-browser
+              hytale-launcher
               system
               ;
           };

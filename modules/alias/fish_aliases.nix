@@ -4,15 +4,11 @@
 let
 
   rebuildNixOS = pkgs.writeScriptBin "rebuild-nixos" ''
-    cd /home/$(whoami)/Nix-Config
-    git add .
-    sudo nixos-rebuild switch --flake .#pedropc --impure --upgrade
-    cd - 
+    sudo nixos-rebuild switch --flake ~/Nix-Config#pedropc --impure --upgrade
   '';
 
   nixOsConfig = pkgs.writeScriptBin "nixos-config" ''
-    cd /home/$(whoami)/Nix-Config
-    nvim
+    nvim /home/$(whoami)/Nix-Config
   '';
 
   updateNixOS = pkgs.writeScriptBin "update-nixos" ''

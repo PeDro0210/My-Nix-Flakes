@@ -1,8 +1,5 @@
 {
-  lib,
-  hyprland-plugins,
   pkgs,
-  pkgs-unstable,
   ...
 }:
 {
@@ -14,16 +11,15 @@
 
     # for workspace to work as intended
     waybar
-    pkgs-unstable.pyprland
+    pyprland
     xdg-desktop-portal-hyprland
     wl-clipboard
     hyprshot
-    wlogout
 
     wlrctl
     wl-kbptr
 
-    pkgs-unstable.quickshell
+    quickshell
 
     wallust
   ];
@@ -59,6 +55,9 @@
     };
   };
 
-  # For wl-kbptr
+  systemd.targets.sleep.enable = false;
+  systemd.targets.suspend.enable = false;
+  systemd.targets.hibernate.enable = false;
+  systemd.targets.hybrid-sleep.enable = false;
 
 }
