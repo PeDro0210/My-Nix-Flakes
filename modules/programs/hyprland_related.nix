@@ -1,5 +1,6 @@
 {
   pkgs,
+  awww,
   ...
 }:
 {
@@ -7,7 +8,8 @@
   environment.systemPackages = with pkgs; [
     kitty
     rofi
-    swww # For background
+
+    awww.packages.${pkgs.stdenv.hostPlatform.system}.awww # swww codeberg fork
 
     # for workspace to work as intended
     waybar

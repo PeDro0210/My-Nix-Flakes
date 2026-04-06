@@ -6,7 +6,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
-
+    awww.url = "git+https://codeberg.org/LGFae/awww";
   };
 
   outputs =
@@ -14,8 +14,10 @@
       spicetify-nix,
       nix-flatpak,
       hytale-launcher,
+      awww,
+      nixpkgs,
       ...
-    }@inputs:
+    }:
     let
 
       mkSystem =
@@ -25,6 +27,7 @@
           modules = [
             spicetify-nix.nixosModules.default
             nix-flatpak.nixosModules.nix-flatpak
+
             { networking.hostName = hostname; }
             # General configuration (users, networking, sound, etc)
             ./modules/configuration.nix
@@ -35,10 +38,11 @@
 
           specialArgs = {
             inherit
-              inputs
+              nixpkgs
               spicetify-nix
               hytale-launcher
               system
+              awww
               ;
           };
         };
@@ -46,7 +50,7 @@
     in
     {
       nixosConfigurations = {
-        pedropc = mkSystem inputs.nixpkgs "x86_64-linux" "pedropc";
+        pedropc = mkSystem nixpkgs "x86_64-linux" "pedropc";
       };
     };
 }

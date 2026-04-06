@@ -18,7 +18,7 @@
     libreoffice
     blender
 
-    #stremio
+    #games
 
     prismlauncher # like dude, I need my minecraft launcher
     protonup-qt
@@ -26,10 +26,11 @@
 
     wine
 
-    pegasus-frontend
     quick-webapps
 
+    pegasus-frontend
     hytale-launcher.packages."${system}".default
+    retroarch
 
   ];
 

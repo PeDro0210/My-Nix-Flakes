@@ -1,10 +1,11 @@
-{ pkgs, ... }@inputs:
+{ pkgs, stow-nix, ... }@inputs:
 
 {
   nix.settings.experimental-features = "nix-command flakes";
 
   #TODO: refactor this
   imports = [
+
     ./drivers/nvidia.nix
     ./drivers/bluetooth.nix
     ./drivers/printing.nix

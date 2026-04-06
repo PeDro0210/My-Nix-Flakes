@@ -1,5 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 {
+
+  environment.systemPackages = with pkgs; [
+    easyeffects
+  ];
+
   security.rtkit.enable = true;
 
   # the pipewire part

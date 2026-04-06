@@ -6,6 +6,9 @@
 
     imagemagick
 
+    pandoc
+    typst
+
     wget
     libgcc
     gcc
