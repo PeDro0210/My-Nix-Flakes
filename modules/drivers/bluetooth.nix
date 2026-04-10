@@ -7,6 +7,7 @@
         Enable = "Source,Sink,Media,Socket";
         AutoEnable = true;
         ControllerMode = "bredr";
+        UserspaceHID = true;
       };
     };
     powerOnBoot = true;
