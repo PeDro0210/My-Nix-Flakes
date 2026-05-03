@@ -1,4 +1,7 @@
-{ pkgs, stow-nix, ... }@inputs:
+{
+  pkgs,
+  ...
+}@inputs:
 
 {
   nix.settings.experimental-features = "nix-command flakes";
@@ -92,7 +95,6 @@
 
   # Is decrepete, but still I need it
   nixpkgs.config.permittedInsecurePackages = [
-    # "mbedtls-2.28.10"
   ];
 
   # for mounting usbs
@@ -101,4 +103,5 @@
 
   # I want to spend uneeded resources
   powerManagement.enable = false;
+
 }

@@ -1,8 +1,7 @@
 {
   pkgs,
-  hytale-launcher,
-  inputs,
   system,
+  inputs,
   ...
 }:
 
@@ -22,14 +21,14 @@
 
     prismlauncher # like dude, I need my minecraft launcher
     protonup-qt
-    lutris-free
+    inputs.nixpkgs-stable.legacyPackages.${system}.lutris-free
 
     wine
 
     quick-webapps
 
     pegasus-frontend
-    hytale-launcher.packages."${system}".default
+    inputs.hytale-launcher.packages."${system}".default
     retroarch
 
   ];

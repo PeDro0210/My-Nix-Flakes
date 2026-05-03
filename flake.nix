@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
@@ -11,13 +12,9 @@
 
   outputs =
     {
-      spicetify-nix,
-      nix-flatpak,
-      hytale-launcher,
-      awww,
       nixpkgs,
       ...
-    }:
+    }@inputs:
     let
 
       mkSystem =
@@ -25,8 +22,8 @@
         pkgs.lib.nixosSystem {
           system = system;
           modules = [
-            spicetify-nix.nixosModules.default
-            nix-flatpak.nixosModules.nix-flatpak
+            inputs.spicetify-nix.nixosModules.default
+            inputs.nix-flatpak.nixosModules.nix-flatpak
 
             { networking.hostName = hostname; }
             # General configuration (users, networking, sound, etc)
@@ -37,13 +34,7 @@
           ];
 
           specialArgs = {
-            inherit
-              nixpkgs
-              spicetify-nix
-              hytale-launcher
-              system
-              awww
-              ;
+            inherit inputs system;
           };
         };
 

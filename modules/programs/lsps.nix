@@ -15,7 +15,6 @@
 
     prettier
     markdownlint-cli2
-    markdown-toc
   ];
 
 }

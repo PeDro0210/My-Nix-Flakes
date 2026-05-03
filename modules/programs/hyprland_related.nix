@@ -1,6 +1,6 @@
 {
   pkgs,
-  awww,
+  inputs,
   ...
 }:
 {
@@ -9,7 +9,7 @@
     kitty
     rofi
 
-    awww.packages.${pkgs.stdenv.hostPlatform.system}.awww # swww codeberg fork
+    inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww # swww codeberg fork
 
     # for workspace to work as intended
     waybar

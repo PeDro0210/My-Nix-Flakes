@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
 {
 
   #TODO: refactor this for later, but this is a good start
@@ -8,6 +11,10 @@
 
     pandoc
     typst
+
+    glib
+
+    dex
 
     wget
     libgcc
@@ -61,6 +68,8 @@
 
     wiremix
     ncspot
+
+    tree
 
   ];
 
