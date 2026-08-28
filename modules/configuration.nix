@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }@inputs:
 
@@ -31,6 +32,7 @@
     ./utils/containers.nix
     ./utils/gc.nix
     ./utils/fonts.nix
+    ./utils/platformio.nix
   ];
 
   #TODO: change the boot loader config to another place
@@ -45,6 +47,17 @@
       device = "nodev";
     };
   };
+
+  #extra boot params
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
+  boot.kernelModules = [ "v4l2loopback" ];
+  boot.extraModprobeConfig = ''
+    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+  '';
+
+  security.polkit.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -90,12 +103,6 @@
 
   # for fking fightcade nixpkg
   programs.nix-ld.enable = true;
-
-  #TODO: remove them when is not needed for pkg building
-
-  # Is decrepete, but still I need it
-  nixpkgs.config.permittedInsecurePackages = [
-  ];
 
   # for mounting usbs
   services.gvfs.enable = true;

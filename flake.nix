@@ -8,6 +8,8 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
     awww.url = "git+https://codeberg.org/LGFae/awww";
+    hyprland.url = "github:hyprwm/Hyprland/v0.55.0";
+    waymac_launcher.url = "github:PeDro0210/Waymac-Launcher";
   };
 
   outputs =
@@ -23,6 +25,7 @@
           system = system;
           modules = [
             inputs.spicetify-nix.nixosModules.default
+            inputs.hyprland.nixosModules.default
             inputs.nix-flatpak.nixosModules.nix-flatpak
 
             { networking.hostName = hostname; }

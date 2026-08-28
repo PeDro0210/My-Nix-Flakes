@@ -1,4 +1,5 @@
-{pkgs,...}:{
+{ pkgs, ... }:
+{
   services.avahi = {
     enable = true;
     nssmdns4 = true;
@@ -16,10 +17,8 @@
     ];
   };
 
-
   environment.systemPackages = with pkgs; [
     system-config-printer
   ];
-
 
 }

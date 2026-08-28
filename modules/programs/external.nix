@@ -21,18 +21,22 @@
 
     prismlauncher # like dude, I need my minecraft launcher
     protonup-qt
-    inputs.nixpkgs-stable.legacyPackages.${system}.lutris-free
 
     wine
 
     quick-webapps
 
-    pegasus-frontend
     inputs.hytale-launcher.packages."${system}".default
-    retroarch
+    wireshark
+    mangohud
+
+    tailscale
+
+    lutris
 
   ];
 
+  programs.wireshark.enable = true;
   # Obs
   programs.obs-studio = {
     enable = true;
@@ -58,6 +62,7 @@
   #Steam
   programs.steam = {
     enable = true;
+
     gamescopeSession.enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server

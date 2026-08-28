@@ -9,12 +9,12 @@
 
     imagemagick
 
+    lshw
+
     pandoc
     typst
 
     glib
-
-    dex
 
     wget
     libgcc
@@ -71,6 +71,8 @@
 
     tree
 
+    insomnia
+
   ];
 
   programs.git.enable = true;
@@ -87,6 +89,12 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+  };
+
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    flake = "/home/pedro0210/Nix-Config"; # sets NH_OS_FLAKE variable for you
   };
 
 }

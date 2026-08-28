@@ -8,5 +8,4 @@
     docker
   ];
 
-  users.users."pedro0210".extraGroups = [ "podman" "docker" ];
 }

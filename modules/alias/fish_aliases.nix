@@ -4,7 +4,7 @@
 let
 
   rebuildNixOS = pkgs.writeScriptBin "rebuild-nixos" ''
-    sudo nixos-rebuild switch --flake ~/Nix-Config#pedropc --impure
+    nh os switch ~/Nix-Config#pedropc --impure
   '';
 
   nixOsConfig = pkgs.writeScriptBin "nixos-config" ''

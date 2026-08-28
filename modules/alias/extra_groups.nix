@@ -7,6 +7,8 @@
     "rebuild-nixos"
     "nix"
     "update-nixos"
-
+    "podman"
+    "docker"
+    "wireshark"
   ];
 }
