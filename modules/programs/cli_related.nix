@@ -71,8 +71,7 @@
 
     tree
 
-    insomnia
-
+    usbutils
   ];
 
   programs.git.enable = true;

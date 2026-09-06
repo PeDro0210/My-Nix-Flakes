@@ -34,6 +34,10 @@
 
     lutris
 
+    vial
+
+    insomnia
+
   ];
 
   programs.wireshark.enable = true;
